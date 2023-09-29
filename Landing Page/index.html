@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook Book</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Shantell+Sans:wght@300;400;700&display=swap');
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #003a4d;
+        }
+        .home{
+            height: 100vh;
+            background-image: url("RecipeBookBackground.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            font-family: 'Shantell Sans', cursive;
+            font-size: xx-large;
+            color: #006A71;
+        }
+        .title{
+            width: fit-content;
+            position: relative;
+            left: 48%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .title h1, .title p{
+            margin: 0px auto 5px;
+        }
+        .menu{
+            padding: 10px;
+            color: #FFA1F5;
+            min-height: 100vh;
+        }
+        .menu h1, .recipe h1{
+            margin: 5px auto 10px;
+            text-align: center;
+            font-family: 'Shantell Sans', cursive;
+            color: #BC7AF9;
+        }
+        .varieties{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            justify-content: space-evenly;
+        }
+        .var{
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            border-style: double;
+            justify-content: space-evenly;
+            height: 325px;
+            width: 350px;
+            box-sizing: border-box;
+        }
+        .topic{
+            margin: 0;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .topic h3{
+            font-family: 'Shantell Sans', cursive;
+            font-size: x-large;
+            transform: rotate(-45deg);
+            height: fit-content;
+        }
+        .topic img{
+            display: block;
+            width: 150px;
+            border-radius: 25px;
+        }  
+        .item{
+            align-self: center;
+        }      
+        .item ul{
+            list-style: none;
+            padding: 0;
+            color: #F8FF95;
+        }
+        .item a{
+            text-decoration: none;
+            color: #F8FF95;
+        }
+        .recipe{
+            padding: 10px;
+            text-align: justify;
+        }        
+        .tagline{
+            font-size: x-large;
+            position: sticky;
+            top: -1px;
+            background-color: #003a4d;
+            padding: 10px;
+        }
+        .tagline a{
+            position: absolute;
+            top: 25px;
+            color: #BC7AF9;
+        }
+        .recipe h2{
+            color: #FFA1F5;
+        }
+        .recipe>div[id]{
+            scroll-margin-top: 80px;
+        }
+        .cook{
+            color: #FFFEC4;
+            margin-left: 40px;
+            margin-right: 20px;
+        }
+        .cook h4{
+            margin-bottom: 0px;
+        }
+        .cook img{
+            width: 250px;
+            border-radius: 25px;
+            margin: 10px;
+            float: right;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header class="home">
+        <div class="title">
+            <h1>Spice It Up</h1>
+            <p>A Flavorful Journey of Spice Blends</p>
+        </div>
+    </header>
+    <main class="menu" id="menu">
+        <h1>Flavors Unleashed</h1>
+        <section class="varieties">
+            <div class="var">
+                <div class="topic">
+                    <h3>Starters</h3>
+                    <img src="Starters.jpg" alt="Starters">
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="#st1">Chicken 65</a></li>
+                        <li><a href="#st2">Fish Amritsari</a></li>
+                        <li><a href="#st3">Mutton Kebab</a></li>
+                        <li><a href="#st4">Garlic Shrimp</a></li>
+                        <li><a href="#st5">Tandoori Quail</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="var">
+                <div class="topic">
+                    <h3>Soups</h3>
+                    <img src="Soups.jpg" alt="Soups">
+                </div>
+                <div class="item">
+                    <ul>
+                        <li>Mutton Paya</li>
+                        <li>Lamb Shorba</li>
+                        <li>Chicken Mulligatawny</li>
+                        <li>Seafood Rasam</li>
+                        <li>Tom Yum Prawn</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="var">
+                <div class="topic">
+                    <h3>Curries</h3>
+                    <img src="Curries.jpg" alt="Curries">
+                </div>
+                <div class="item">
+                    <ul>
+                        <li>Goan Fish </li>
+                        <li>Kashmiri Rogan Josh</li>
+                        <li>Chicken Vindaloo</li>
+                        <li>Malabar Prawn Curry</li>
+                        <li>Spicy Crab</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="var">
+                <div class="topic">
+                    <h3>Biriyanis</h3>
+                    <img src="Biriyanis.jpg" alt="Biriyanis">
+                </div>
+                <div class="item">
+                    <ul>
+                        <li>Lucknawi Chicken</li>
+                        <li>Kolkata Mutton</li>
+                        <li>Chettinad Fish</li>
+                        <li>Awadhi Dum</li>
+                        <li>Kerala Chicken</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="var">
+                <div class="topic">
+                    <h3>Breads</h3>
+                    <img src="Breads.jpg" alt="Breads">
+                </div>
+                <div class="item">
+                    <ul>
+                        <li>Garlic Naan</li>
+                        <li>Aloo Paratha</li>
+                        <li>Missi Roti</li>
+                        <li>Onion Kulcha</li>
+                        <li>Ajwain Paratha</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="var">
+                <div class="topic">
+                    <h3>Tandooris</h3>
+                    <img src="Tandooris.jfif" alt="Tandooris">
+                </div>
+                <div class="item">
+                    <ul>
+                        <li>Lamb Chops</li>
+                        <li>Lobster</li>
+                        <li>Chicken</li>
+                        <li>Eggs</li>
+                        <li>Crab</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="var">
+                <div class="topic">
+                    <h3>Wraps</h3>
+                    <img src="Wraps.jfif" alt="Wraps">
+                </div>
+                <div class="item">
+                    <ul>
+                        <li>Frankie</li>
+                        <li>Fish Tikka</li>
+                        <li>Mutton Baida</li>
+                        <li>Kathi Rol</li>
+                        <li>Chicken Shawarma</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="var">
+                <div class="topic">
+                    <h3>Desserts</h3>
+                    <img src="Desserts.jfif" alt="Dessertss">       
+                </div>
+                <div class="item">
+                    <ul>
+                        <li>Rasgulla</li>
+                        <li>Gulab Jamun</li>
+                        <li>Kheer</li>
+                        <li>Jalebi</li>
+                        <li>Mysore Pak</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="recipe">
+        <div class="tagline">
+            <a href="#menu"><i class='bx bxs-food-menu'></i></a>
+            <h1>Feast & Flourish: A Recipe Revelation</h1>
+        </div>
+        <div id="st1">
+            <h2>Chicken 65</h2>
+            <div class="cook">
+                <blockquote>
+                    Chicken 65 is a fiery and flavorful South Indian dish known for its spicy kick and vibrant red color. This deep-fried chicken appetizer is a favorite among spice lovers.
+                </blockquote>
+                <h4>Ingredients</h4>
+                <img src="Chicken65.jfif" alt="Chicken 65" >
+                <ul>
+                    <li>500 grams boneless chicken pieces</li>
+                    <li>2 tablespoons yogurt</li>                
+                    <li>1 tablespoon ginger-garlic paste</li>
+                    <li>1 teaspoon red chili powder</li>
+                    <li>1/2 teaspoon turmeric powder</li>
+                    <li>1 teaspoon garam masala</li>
+                    <li>1 teaspoon cumin powder</li>
+                    <li>1 teaspoon coriander powder</li>
+                    <li>2 tablespoons cornstarch</li>
+                    <li>2 tablespoons rice flour</li>
+                    <li>1 egg</li>
+                    <li>Salt to taste</li>
+                    <li>Curry leaves for garnish</li>
+                    <li>Oil for deep frying</li>
+                </ul>
+                <h4>Recipe</h4>
+                <ol>
+                    <li>In a mixing bowl, combine the boneless chicken pieces, yogurt, ginger-garlic paste, red chili powder, turmeric powder, garam masala, cumin powder, and coriander powder. Mix well to coat the chicken evenly with the spices. Allow it to marinate for at least 30 minutes.</li>
+                    <li>In another bowl, prepare a batter by mixing cornstarch, rice flour, egg, and a pinch of salt. Add a little water to make a thick and smooth batter.</li>
+                    <li>Heat oil in a deep frying pan over medium-high heat.</li>
+                    <li>Dip each marinated chicken piece into the batter, ensuring it's well coated, and then carefully drop it into the hot oil. Fry in batches to avoid overcrowding the pan.</li>
+                    <li>Fry the chicken until it turns golden brown and crispy. Remove the chicken pieces and drain excess oil on paper towels.</li>
+                    <li>In a separate pan, heat a little oil and add curry leaves. Sauté for a few seconds until they become fragrant.</li>
+                    <li>Add the fried chicken pieces to the pan with curry leaves and toss them to coat in the aromatic curry leaf oil.</li>
+                    <li>Serve hot as an appetizer or snack. Chicken 65 pairs well with mint chutney or lemon wedges.</li>
+                </ol>
+                <p>Enjoy the fiery and flavorful Chicken 65 as a delicious appetizer or side dish!</p>
+            </div>
+        </div>
+        <div id="st2">
+            <h2>Fish Amritsari</h2>
+            <div class="cook">
+                <blockquote>
+                    Chicken 65 is a fiery and flavorful South Indian dish known for its spicy kick and vibrant red color. This deep-fried chicken appetizer is a favorite among spice lovers.
+                </blockquote>
+                <h4>Ingredients</h4>
+                <img src="FishAmritsari.jfif" alt="Fish Amritsari" >
+                <ul>
+                    <li>500 grams boneless chicken pieces</li>
+                    <li>2 tablespoons yogurt</li>                
+                    <li>1 tablespoon ginger-garlic paste</li>
+                    <li>1 teaspoon red chili powder</li>
+                    <li>1/2 teaspoon turmeric powder</li>
+                    <li>1 teaspoon garam masala</li>
+                    <li>1 teaspoon cumin powder</li>
+                    <li>1 teaspoon coriander powder</li>
+                    <li>2 tablespoons cornstarch</li>
+                    <li>2 tablespoons rice flour</li>
+                    <li>1 egg</li>
+                    <li>Salt to taste</li>
+                    <li>Curry leaves for garnish</li>
+                    <li>Oil for deep frying</li>
+                </ul>
+                <h4>Recipe</h4>
+                <ol>
+                    <li>In a mixing bowl, combine the boneless chicken pieces, yogurt, ginger-garlic paste, red chili powder, turmeric powder, garam masala, cumin powder, and coriander powder. Mix well to coat the chicken evenly with the spices. Allow it to marinate for at least 30 minutes.</li>
+                    <li>In another bowl, prepare a batter by mixing cornstarch, rice flour, egg, and a pinch of salt. Add a little water to make a thick and smooth batter.</li>
+                    <li>Heat oil in a deep frying pan over medium-high heat.</li>
+                    <li>Dip each marinated chicken piece into the batter, ensuring it's well coated, and then carefully drop it into the hot oil. Fry in batches to avoid overcrowding the pan.</li>
+                    <li>Fry the chicken until it turns golden brown and crispy. Remove the chicken pieces and drain excess oil on paper towels.</li>
+                    <li>In a separate pan, heat a little oil and add curry leaves. Sauté for a few seconds until they become fragrant.</li>
+                    <li>Add the fried chicken pieces to the pan with curry leaves and toss them to coat in the aromatic curry leaf oil.</li>
+                    <li>Serve hot as an appetizer or snack. Chicken 65 pairs well with mint chutney or lemon wedges.</li>
+                </ol>
+                <p>Enjoy the fiery and flavorful Chicken 65 as a delicious appetizer or side dish!</p>
+            </div>
+        </div>
+        <div id="st3">
+            <h2>Mutton Kebab</h2>
+            <div class="cook">
+                <blockquote>
+                    Chicken 65 is a fiery and flavorful South Indian dish known for its spicy kick and vibrant red color. This deep-fried chicken appetizer is a favorite among spice lovers.
+                </blockquote>
+                <h4>Ingredients</h4>
+                <img src="MuttonKebab.jfif" alt="Mutton Kebab" >
+                <ul>
+                    <li>500 grams boneless chicken pieces</li>
+                    <li>2 tablespoons yogurt</li>                
+                    <li>1 tablespoon ginger-garlic paste</li>
+                    <li>1 teaspoon red chili powder</li>
+                    <li>1/2 teaspoon turmeric powder</li>
+                    <li>1 teaspoon garam masala</li>
+                    <li>1 teaspoon cumin powder</li>
+                    <li>1 teaspoon coriander powder</li>
+                    <li>2 tablespoons cornstarch</li>
+                    <li>2 tablespoons rice flour</li>
+                    <li>1 egg</li>
+                    <li>Salt to taste</li>
+                    <li>Curry leaves for garnish</li>
+                    <li>Oil for deep frying</li>
+                </ul>
+                <h4>Recipe</h4>
+                <ol>
+                    <li>In a mixing bowl, combine the boneless chicken pieces, yogurt, ginger-garlic paste, red chili powder, turmeric powder, garam masala, cumin powder, and coriander powder. Mix well to coat the chicken evenly with the spices. Allow it to marinate for at least 30 minutes.</li>
+                    <li>In another bowl, prepare a batter by mixing cornstarch, rice flour, egg, and a pinch of salt. Add a little water to make a thick and smooth batter.</li>
+                    <li>Heat oil in a deep frying pan over medium-high heat.</li>
+                    <li>Dip each marinated chicken piece into the batter, ensuring it's well coated, and then carefully drop it into the hot oil. Fry in batches to avoid overcrowding the pan.</li>
+                    <li>Fry the chicken until it turns golden brown and crispy. Remove the chicken pieces and drain excess oil on paper towels.</li>
+                    <li>In a separate pan, heat a little oil and add curry leaves. Sauté for a few seconds until they become fragrant.</li>
+                    <li>Add the fried chicken pieces to the pan with curry leaves and toss them to coat in the aromatic curry leaf oil.</li>
+                    <li>Serve hot as an appetizer or snack. Chicken 65 pairs well with mint chutney or lemon wedges.</li>
+                </ol>
+                <p>Enjoy the fiery and flavorful Chicken 65 as a delicious appetizer or side dish!</p>
+            </div>
+        </div>
+        <div id="st4">
+            <h2>Garlic Shrimp</h2>
+            <div class="cook">
+                <blockquote>
+                    Chicken 65 is a fiery and flavorful South Indian dish known for its spicy kick and vibrant red color. This deep-fried chicken appetizer is a favorite among spice lovers.
+                </blockquote>
+                <h4>Ingredients</h4>
+                <img src="GarlicShrimp.jfif" alt="Garlic Shrimp" >
+                <ul>
+                    <li>500 grams boneless chicken pieces</li>
+                    <li>2 tablespoons yogurt</li>                
+                    <li>1 tablespoon ginger-garlic paste</li>
+                    <li>1 teaspoon red chili powder</li>
+                    <li>1/2 teaspoon turmeric powder</li>
+                    <li>1 teaspoon garam masala</li>
+                    <li>1 teaspoon cumin powder</li>
+                    <li>1 teaspoon coriander powder</li>
+                    <li>2 tablespoons cornstarch</li>
+                    <li>2 tablespoons rice flour</li>
+                    <li>1 egg</li>
+                    <li>Salt to taste</li>
+                    <li>Curry leaves for garnish</li>
+                    <li>Oil for deep frying</li>
+                </ul>
+                <h4>Recipe</h4>
+                <ol>
+                    <li>In a mixing bowl, combine the boneless chicken pieces, yogurt, ginger-garlic paste, red chili powder, turmeric powder, garam masala, cumin powder, and coriander powder. Mix well to coat the chicken evenly with the spices. Allow it to marinate for at least 30 minutes.</li>
+                    <li>In another bowl, prepare a batter by mixing cornstarch, rice flour, egg, and a pinch of salt. Add a little water to make a thick and smooth batter.</li>
+                    <li>Heat oil in a deep frying pan over medium-high heat.</li>
+                    <li>Dip each marinated chicken piece into the batter, ensuring it's well coated, and then carefully drop it into the hot oil. Fry in batches to avoid overcrowding the pan.</li>
+                    <li>Fry the chicken until it turns golden brown and crispy. Remove the chicken pieces and drain excess oil on paper towels.</li>
+                    <li>In a separate pan, heat a little oil and add curry leaves. Sauté for a few seconds until they become fragrant.</li>
+                    <li>Add the fried chicken pieces to the pan with curry leaves and toss them to coat in the aromatic curry leaf oil.</li>
+                    <li>Serve hot as an appetizer or snack. Chicken 65 pairs well with mint chutney or lemon wedges.</li>
+                </ol>
+                <p>Enjoy the fiery and flavorful Chicken 65 as a delicious appetizer or side dish!</p>
+            </div>
+        </div>
+        <div id="st5">
+            <h2>Tandoori Quail</h2>
+            <div class="cook">
+                <blockquote>
+                    Chicken 65 is a fiery and flavorful South Indian dish known for its spicy kick and vibrant red color. This deep-fried chicken appetizer is a favorite among spice lovers.
+                </blockquote>
+                <h4>Ingredients</h4>
+                <img src="TandooriQuail.jfif" alt="Tandoori Quail" >
+                <ul>
+                    <li>500 grams boneless chicken pieces</li>
+                    <li>2 tablespoons yogurt</li>                
+                    <li>1 tablespoon ginger-garlic paste</li>
+                    <li>1 teaspoon red chili powder</li>
+                    <li>1/2 teaspoon turmeric powder</li>
+                    <li>1 teaspoon garam masala</li>
+                    <li>1 teaspoon cumin powder</li>
+                    <li>1 teaspoon coriander powder</li>
+                    <li>2 tablespoons cornstarch</li>
+                    <li>2 tablespoons rice flour</li>
+                    <li>1 egg</li>
+                    <li>Salt to taste</li>
+                    <li>Curry leaves for garnish</li>
+                    <li>Oil for deep frying</li>
+                </ul>
+                <h4>Recipe</h4>
+                <ol>
+                    <li>In a mixing bowl, combine the boneless chicken pieces, yogurt, ginger-garlic paste, red chili powder, turmeric powder, garam masala, cumin powder, and coriander powder. Mix well to coat the chicken evenly with the spices. Allow it to marinate for at least 30 minutes.</li>
+                    <li>In another bowl, prepare a batter by mixing cornstarch, rice flour, egg, and a pinch of salt. Add a little water to make a thick and smooth batter.</li>
+                    <li>Heat oil in a deep frying pan over medium-high heat.</li>
+                    <li>Dip each marinated chicken piece into the batter, ensuring it's well coated, and then carefully drop it into the hot oil. Fry in batches to avoid overcrowding the pan.</li>
+                    <li>Fry the chicken until it turns golden brown and crispy. Remove the chicken pieces and drain excess oil on paper towels.</li>
+                    <li>In a separate pan, heat a little oil and add curry leaves. Sauté for a few seconds until they become fragrant.</li>
+                    <li>Add the fried chicken pieces to the pan with curry leaves and toss them to coat in the aromatic curry leaf oil.</li>
+                    <li>Serve hot as an appetizer or snack. Chicken 65 pairs well with mint chutney or lemon wedges.</li>
+                </ol>
+                <p>Enjoy the fiery and flavorful Chicken 65 as a delicious appetizer or side dish!</p>
+            </div>
+        </div>       
+    </section>
+</body>
+</html>
